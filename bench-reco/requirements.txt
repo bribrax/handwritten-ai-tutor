@@ -1,0 +1,20 @@
+# Banc de reconnaissance d'écriture manuscrite mathématique — Python 3.11, CPU uniquement.
+# Versions figées. Le gel complet (dépendances indirectes comprises) est dans requirements-lock.txt.
+#
+#   py -3.11 -m venv .venv
+#   .venv\Scripts\python -m pip install -r requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.15.0+cpu
+torchvision==0.29.2+cpu
+
+pix2text==1.1.7
+texteller==1.0.2
+transformers==4.47.0       # imposé par texteller
+# cnocr/cnstd (tirés par pix2text) importent une fonction supprimée dans rapidocr 3.10 : ne pas monter.
+rapidocr==3.9.1
+
+numpy==2.4.6
+pillow==13.0.0
+rapidfuzz==3.14.6
+pytest==9.2.0

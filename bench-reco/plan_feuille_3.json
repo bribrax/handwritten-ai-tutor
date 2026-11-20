@@ -1,0 +1,22 @@
+{
+  "consigne": "Feuille 3 : 12 lignes à écrire à la main, dans cet ordre, une par ligne. Les 5 lignes « faux » sont à écrire TELLES QUELLES (avec la faute). Ce fichier pré-remplit reference_feuille_3.json si la feuille donne exactement 12 groupes.",
+  "lignes": [
+    {"ligne": "\\frac{d}{dx}\\left(x^2 e^{3x}\\right) = 2x\\,e^{3x} + 3x^2 e^{3x}", "faux": false, "erreur": ""},
+    {"ligne": "\\frac{d}{dx}\\left(\\frac{x}{x^2+1}\\right) = \\frac{(x^2+1) + 2x^2}{(x^2+1)^2}", "faux": true,
+     "erreur": "Règle du quotient : le numérateur est (x²+1) − 2x², pas (x²+1) + 2x² (erreur de signe)."},
+    {"ligne": "\\lim_{x\\to 0}\\frac{e^{x}-1}{x} = 1", "faux": false, "erreur": ""},
+    {"ligne": "(a+b)^2 - (a-b)^2 = 2ab", "faux": true,
+     "erreur": "Le développement donne 4ab, pas 2ab (facteur 2 oublié)."},
+    {"ligne": "\\int_0^{\\pi} \\sin^2 x\\,dx = \\frac{\\pi}{2}", "faux": false, "erreur": ""},
+    {"ligne": "\\int_0^1 x e^{x}\\,dx = \\left[x e^{x}\\right]_0^1 - \\int_0^1 e^{x}dx = e-(e-1) = 1", "faux": false, "erreur": ""},
+    {"ligne": "\\sum_{k=1}^{n} k^2 = \\frac{n(n+1)}{2}", "faux": true,
+     "erreur": "C'est la somme des k ; la somme des carrés vaut n(n+1)(2n+1)/6."},
+    {"ligne": "\\int_{-\\infty}^{+\\infty} |e^{-t}u(t)|^2\\,dt = \\frac12", "faux": false, "erreur": ""},
+    {"ligne": "(1+i)^2 = 2i", "faux": false, "erreur": ""},
+    {"ligne": "u(t) * u(t) = u(t)", "faux": true,
+     "erreur": "La convolution de deux échelons vaut t·u(t) (une rampe), pas u(t)."},
+    {"ligne": "\\frac{d}{dt}\\left(e^{-2t}u(t)\\right) = -2e^{-2t}u(t) + e^{-2t}\\delta(t)", "faux": false, "erreur": ""},
+    {"ligne": "\\int_0^2 (x^2+1)\\,dx = \\frac{8}{3} + 1 = \\frac{11}{3}", "faux": true,
+     "erreur": "Erreur de calcul : ∫₀² 1 dx = 2, donc 8/3 + 2 = 14/3 (et non 11/3)."}
+  ]
+}

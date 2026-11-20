@@ -1,0 +1,27 @@
+{
+  "name": "tutorat",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "pwa": "vite build && vite preview",
+    "icons": "node scripts/make-icons.mjs",
+    "reco": "bench-reco\\.venv\\Scripts\\python bench-reco\\serveur.py"
+  },
+  "dependencies": {
+    "@fontsource/caveat": "^5.3.0",
+    "idb-keyval": "^6.3.0",
+    "katex": "^0.16.22",
+    "perfect-freehand": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.8",
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0"
+  }
+}

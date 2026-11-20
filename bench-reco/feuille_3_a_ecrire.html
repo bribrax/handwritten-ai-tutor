@@ -1,0 +1,58 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feuille 3 — à écrire</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<style>
+  body { font: 16px system-ui, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 22px; }
+  #l { padding-left: 0; list-style: none; }
+  #l li { display: grid; grid-template-columns: 38px 1fr; gap: 6px 10px; padding: 12px 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; font-size: 20px; }
+  #l li .n { font-weight: 700; color: #777; }
+  li.faux { border-color: #d92d20; background: #fef3f2; }
+  #l li .badge { font-size: 12px; background: #d92d20; color: #fff; border-radius: 9px; padding: 1px 9px; margin-left: 8px; vertical-align: middle; }
+  #l li .why { grid-column: 2; font-size: 14px; color: #b42318; }
+  li.juste .ok { grid-column: 2; font-size: 12px; color: #16a34a; }
+  .regles { background: #f6f6f6; border-radius: 10px; padding: 12px 18px; font-size: 15px; }
+</style>
+<h1>Feuille 3 — 12 lignes à écrire (5 fautes volontaires)</h1>
+<div class="regles">
+  <b>Règles</b>
+  <ul>
+    <li>Écris les lignes <b>dans cet ordre</b>, <b>une par ligne</b>, en laissant ~1,5 cm entre deux lignes (pour que chaque ligne forme un groupe).</li>
+    <li>Stylo <b>noir</b> uniquement. N'écris ni numéro, ni titre, ni commentaire. Pas de rature : si tu te trompes, gomme.</li>
+    <li>Les lignes encadrées en rouge sont <b>fausses volontairement</b> : écris-les <b>telles quelles</b>, avec la faute.</li>
+    <li>Écris naturellement, à ta vitesse habituelle. Les lignes justes ne doivent pas être relues ni « arrangées » après coup.</li>
+    <li>Ensuite : réglages ⚙ → « Exporter le JSON », et dépose le fichier sous le nom <code>feuille_3.json</code> à la racine du projet, comme pour feuille_1 et feuille_2.</li>
+  </ul>
+</div>
+<ol id="l"></ol>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+const L = [
+  [false, String.raw`\frac{d}{dx}\left(x^2 e^{3x}\right) = 2x\,e^{3x} + 3x^2 e^{3x}`, ""],
+  [true,  String.raw`\frac{d}{dx}\left(\frac{x}{x^2+1}\right) = \frac{(x^2+1) + 2x^2}{(x^2+1)^2}`, "Faute : règle du quotient, le numérateur correct est (x²+1) − 2x² (signe)."],
+  [false, String.raw`\lim_{x\to 0}\frac{e^{x}-1}{x} = 1`, ""],
+  [true,  String.raw`(a+b)^2 - (a-b)^2 = 2ab`, "Faute : cela vaut 4ab (facteur oublié)."],
+  [false, String.raw`\int_0^{\pi} \sin^2 x\,dx = \frac{\pi}{2}`, ""],
+  [false, String.raw`\int_0^1 x e^{x}\,dx = \left[x e^{x}\right]_0^1 - \int_0^1 e^{x}dx = e-(e-1) = 1`, ""],
+  [true,  String.raw`\sum_{k=1}^{n} k^2 = \frac{n(n+1)}{2}`, "Faute : c'est la formule de la somme des k ; pour k², n(n+1)(2n+1)/6."],
+  [false, String.raw`\int_{-\infty}^{+\infty} |e^{-t}u(t)|^2\,dt = \frac12`, ""],
+  [false, String.raw`(1+i)^2 = 2i`, ""],
+  [true,  String.raw`u(t) * u(t) = u(t)`, "Faute : la convolution de deux échelons vaut t·u(t)."],
+  [false, String.raw`\frac{d}{dt}\left(e^{-2t}u(t)\right) = -2e^{-2t}u(t) + e^{-2t}\delta(t)`, ""],
+  [true,  String.raw`\int_0^2 (x^2+1)\,dx = \frac{8}{3} + 1 = \frac{11}{3}`, "Faute : ∫₀² 1 dx = 2, donc 8/3 + 2 = 14/3."],
+];
+const ol = document.getElementById('l');
+L.forEach(([faux, tex, why], i) => {
+  const li = document.createElement('li');
+  li.className = faux ? 'faux' : 'juste';
+  const n = Object.assign(document.createElement('span'), { className: 'n', textContent: (i + 1) + '.' });
+  const f = document.createElement('span');
+  katex.render(tex, f, { throwOnError: false });
+  if (faux) f.append(Object.assign(document.createElement('span'), { className: 'badge', textContent: 'FAUX — à écrire tel quel' }));
+  li.append(n, f);
+  if (faux) li.append(Object.assign(document.createElement('div'), { className: 'why', textContent: why }));
+  ol.append(li);
+});
+</script>

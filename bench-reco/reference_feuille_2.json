@@ -1,0 +1,134 @@
+{
+  "feuille": "feuille_2.json",
+  "consigne": "Pour chaque groupe, remplis « erreur » avec une description courte de la faute de l'élève ; laisse vide si la ligne est juste. Les groupes de texte et les figures sont des lignes « justes » (vides) sauf si tu veux qu'on les signale.",
+  "groupes": [
+    {
+      "id": "G1",
+      "type_probable": "figure",
+      "latex": "rect=1",
+      "corrige_en_bleu": true,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G2",
+      "type_probable": "formule",
+      "latex": "w(t)= \\delta(t+8)+ \\delta(t+4)+ \\delta(t)+ \\delta(t-4)+ \\delta(t-8)",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G3",
+      "type_probable": "formule",
+      "latex": "\\sigma S(t-a)*h(t)=h(t-a)",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G4",
+      "type_probable": "formule",
+      "latex": "(b)f(t)= \\sum_{-2}^{2}rect(t-4k)",
+      "corrige_en_bleu": true,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G5",
+      "type_probable": "texte",
+      "latex": "3)inletconditionc_{ny}thefelrect \\ldots",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G6",
+      "type_probable": "regle",
+      "latex": null,
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G7",
+      "type_probable": "formule",
+      "latex": "x(t)=e^{-t}u(t)",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G8",
+      "type_probable": "formule",
+      "latex": "h(t)=e^{-2t}u(t)",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G9",
+      "type_probable": "formule",
+      "latex": "y(t)= \\int_{- \\infty}^{+ \\infty}u(t)e^{-t}e^{-z(t- \\tau)}u(t- \\tau)d \\tau",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G10",
+      "type_probable": "formule",
+      "latex": "y= \\int_{0}^{t}e^{r \\tau}e^{r2(t- \\tau)}= \\int_{0}^{t}e^{-2 \\tau+ \\tau}= \\int_{0}^{t}e^{-2t}e^{ \\tau}",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G11",
+      "type_probable": "formule",
+      "latex": "y= \\left[ e^{-2t}e^{ \\tau} \\right]_{0}^{t}=e^{-2t}e^{t}-e^{-2t}=e^{-t}e^{-2t}",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G12",
+      "type_probable": "regle",
+      "latex": null,
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G13",
+      "type_probable": "formule",
+      "latex": "n^2=2^1",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G14",
+      "type_probable": "formule",
+      "latex": "9k^2=2^1",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G15",
+      "type_probable": "formule",
+      "latex": "\\frac{x}{3}=k",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    },
+    {
+      "id": "G16",
+      "type_probable": "formule",
+      "latex": "x=3k",
+      "corrige_en_bleu": false,
+      "ligne_prevue": "",
+      "erreur": ""
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+node_modules
+dist
+certs
+bench-reco/logs/
+bench-reco/corrections_lecture/
+
+# fichiers locaux
+err_*.txt
+out_*.txt
+.pytest_cache/
+__pycache__/

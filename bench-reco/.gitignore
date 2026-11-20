@@ -1,0 +1,7 @@
+.venv/
+sorties/
+__pycache__/
+.pytest_cache/
+*.log
+logs/
+corrections_lecture/

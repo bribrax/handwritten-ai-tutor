@@ -1,0 +1,13 @@
+{
+  "G2": "w(t)=\\delta(t+8)+\\delta(t+4)+\\delta(t)+\\delta(t-4)+\\delta(t-8)",
+  "G3": "\\text{or }\\delta(t-a)*h(t)=h(t-a)",
+  "G7": "x(t)=e^{-t}u(t)",
+  "G8": "h(t)=e^{-2t}u(t)",
+  "G9": "y(t)=\\int_{-\\infty}^{+\\infty}u(\\tau)e^{-\\tau}e^{-2(t-\\tau)}u(t-\\tau)d\\tau",
+  "G10": "y=\\int_0^t e^{-\\tau}e^{-2(t-\\tau)}d\\tau=\\int_0^t e^{-2t+\\tau}d\\tau=\\int_0^t e^{-2t}e^{\\tau}d\\tau",
+  "G11": "y=\\Big[e^{-2t}e^{\\tau}\\Big]_0^t=e^{-2t}e^{t}-e^{-2t}=e^{-t}-e^{-2t}",
+  "G13": "x^2=2^1",
+  "G14": "9k^2=2^1",
+  "G15": "\\frac{x}{3}=k",
+  "G16": "x=3k"
+}

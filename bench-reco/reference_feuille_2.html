@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<title>Référence feuille 2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:#f6f6f4;color:#222}
+.wrap{display:flex;gap:16px;padding:16px}
+.page{flex:0 0 42%;position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto;background:#fff;border:1px solid #ddd;border-radius:8px}
+.page img{width:100%;display:block}
+.liste{flex:1;min-width:0}
+h1{font-size:18px;margin:0 0 4px}
+.aide{font-size:13px;color:#666;margin:0 0 12px}
+.g{background:#fff;border:1px solid #ddd;border-radius:8px;padding:10px 12px;margin-bottom:10px}
+.g.bleu{border-left:5px solid #1a56db}
+.tete{display:flex;gap:8px;align-items:center;font-size:13px;color:#666;margin-bottom:6px}
+.id{font-weight:700;color:#c0007a;font-size:15px}
+.tag{background:#eee;border-radius:4px;padding:1px 6px}
+.tag.b{background:#dbe6fb;color:#1a56db}
+.rendu{font-size:18px;overflow-x:auto;padding:4px 0}
+.brut{font-family:ui-monospace,monospace;font-size:12px;color:#888;word-break:break-all;margin:4px 0 8px}
+.vide{color:#aaa;font-style:italic}
+input{width:100%;box-sizing:border-box;padding:7px 9px;border:1px solid #ccc;border-radius:6px;font-size:14px}
+.barre{position:sticky;bottom:0;background:#f6f6f4;padding:10px 0;display:flex;gap:8px;align-items:center}
+button{padding:8px 14px;border:0;border-radius:6px;background:#222;color:#fff;font-size:14px;cursor:pointer}
+button.sec{background:#ddd;color:#222}
+#msg{font-size:13px;color:#2a7}
+</style></head><body>
+<div class="wrap">
+<div class="page"><img src="sorties/effort_feuille_2/images/image_page.png" alt="Feuille 2 avec les groupes numérotés"></div>
+<div class="liste">
+<h1>Référence — feuille 2</h1>
+<p class="aide">Écris la faute de l'élève en une phrase, laisse vide si la ligne est juste. Bord bleu = ligne où tu avais corrigé en bleu. Tes saisies sont gardées dans ce navigateur.</p>
+<div id="groupes"></div>
+<div class="barre"><button id="dl">Télécharger le JSON</button><button class="sec" id="cp">Copier le JSON</button><span id="msg"></span></div>
+</div></div>
+<script>
+const REF = {"feuille": "feuille_2.json", "consigne": "Pour chaque groupe, remplis « erreur » avec une description courte de la faute de l'élève ; laisse vide si la ligne est juste. Les groupes de texte et les figures sont des lignes « justes » (vides) sauf si tu veux qu'on les signale.", "groupes": [{"id": "G1", "type_probable": "figure", "latex": "rect=1", "corrige_en_bleu": true, "erreur": ""}, {"id": "G2", "type_probable": "formule", "latex": "w(t)= \\delta(t+8)+ \\delta(t+4)+ \\delta(t)+ \\delta(t-4)+ \\delta(t-8)", "corrige_en_bleu": false, "erreur": ""}, {"id": "G3", "type_probable": "formule", "latex": "\\sigma S(t-a)*h(t)=h(t-a)", "corrige_en_bleu": false, "erreur": ""}, {"id": "G4", "type_probable": "formule", "latex": "(b)f(t)= \\sum_{-2}^{2}rect(t-4k)", "corrige_en_bleu": true, "erreur": ""}, {"id": "G5", "type_probable": "texte", "latex": "3)inletconditionc_{ny}thefelrect \\ldots", "corrige_en_bleu": false, "erreur": ""}, {"id": "G6", "type_probable": "regle", "latex": null, "corrige_en_bleu": false, "erreur": ""}, {"id": "G7", "type_probable": "formule", "latex": "x(t)=e^{-t}u(t)", "corrige_en_bleu": false, "erreur": ""}, {"id": "G8", "type_probable": "formule", "latex": "h(t)=e^{-2t}u(t)", "corrige_en_bleu": false, "erreur": ""}, {"id": "G9", "type_probable": "formule", "latex": "y(t)= \\int_{- \\infty}^{+ \\infty}u(t)e^{-t}e^{-z(t- \\tau)}u(t- \\tau)d \\tau", "corrige_en_bleu": false, "erreur": ""}, {"id": "G10", "type_probable": "formule", "latex": "y= \\int_{0}^{t}e^{r \\tau}e^{r2(t- \\tau)}= \\int_{0}^{t}e^{-2 \\tau+ \\tau}= \\int_{0}^{t}e^{-2t}e^{ \\tau}", "corrige_en_bleu": false, "erreur": ""}, {"id": "G11", "type_probable": "formule", "latex": "y= \\left[ e^{-2t}e^{ \\tau} \\right]_{0}^{t}=e^{-2t}e^{t}-e^{-2t}=e^{-t}e^{-2t}", "corrige_en_bleu": false, "erreur": ""}, {"id": "G12", "type_probable": "regle", "latex": null, "corrige_en_bleu": false, "erreur": ""}, {"id": "G13", "type_probable": "formule", "latex": "n^2=2^1", "corrige_en_bleu": false, "erreur": ""}, {"id": "G14", "type_probable": "formule", "latex": "9k^2=2^1", "corrige_en_bleu": false, "erreur": ""}, {"id": "G15", "type_probable": "formule", "latex": "\\frac{x}{3}=k", "corrige_en_bleu": false, "erreur": ""}, {"id": "G16", "type_probable": "formule", "latex": "x=3k", "corrige_en_bleu": false, "erreur": ""}]};
+const CLE = "ref_feuille_2_erreurs";
+let saved = {};
+try { saved = JSON.parse(localStorage.getItem(CLE) || "{}"); } catch (e) {}
+const box = document.getElementById("groupes");
+REF.groupes.forEach(g => {
+  if (saved[g.id] !== undefined) g.erreur = saved[g.id];
+  const d = document.createElement("div");
+  d.className = "g" + (g.corrige_en_bleu ? " bleu" : "");
+  d.innerHTML = '<div class="tete"><span class="id">' + g.id + '</span><span class="tag">' + (g.type_probable || "") + '</span>' + (g.corrige_en_bleu ? '<span class="tag b">corrigé en bleu</span>' : '') + '</div><div class="rendu"></div><div class="brut"></div>';
+  const r = d.querySelector(".rendu"), b = d.querySelector(".brut");
+  if (g.latex) {
+    try { katex.render(g.latex, r, { throwOnError: false, displayMode: false }); } catch (e) { r.textContent = g.latex; }
+    b.textContent = g.latex;
+  } else { r.innerHTML = '<span class="vide">(rien de lu — trait de séparation)</span>'; b.remove(); }
+  const inp = document.createElement("input");
+  inp.placeholder = "Faute de l'élève (vide si juste)";
+  inp.value = g.erreur || "";
+  inp.addEventListener("input", () => { g.erreur = inp.value; saved[g.id] = inp.value; try { localStorage.setItem(CLE, JSON.stringify(saved)); } catch (e) {} });
+  d.appendChild(inp);
+  box.appendChild(d);
+});
+const texte = () => JSON.stringify(REF, null, 2);
+const msg = t => { const m = document.getElementById("msg"); m.textContent = t; setTimeout(() => m.textContent = "", 4000); };
+document.getElementById("dl").onclick = () => {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([texte()], { type: "application/json" }));
+  a.download = "reference_feuille_2.json"; a.click();
+  msg("Téléchargé : remplace bench-reco/reference_feuille_2.json par ce fichier.");
+};
+document.getElementById("cp").onclick = () => navigator.clipboard.writeText(texte()).then(() => msg("Copié."), () => msg("Copie impossible, utilise Télécharger."));
+</script></body></html>
