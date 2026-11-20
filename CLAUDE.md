@@ -53,7 +53,7 @@ PWA Vite + TypeScript vanilla, `perfect-freehand`, `idb-keyval`, `vite-plugin-pw
 ### Lancer
 - PowerShell bloque `npm.ps1` : utiliser **`npm.cmd run dev`** (port 5173, ou 5174 si occupé) ou **`npm.cmd run pwa`** (build + prévisualisation port 4173,
   seul endroit où le service worker tourne).
-- HTTPS de confiance : **mkcert installé**, certificat dans `certs/` (IP du PC **192.168.1.53** ; à régénérer si elle change :
+- HTTPS de confiance : **mkcert installé**, certificat dans `certs/` (IP du PC **<IP-du-PC>** ; à régénérer si elle change :
   `mkcert -cert-file certs/dev.pem -key-file certs/dev-key.pem localhost 127.0.0.1 <IP>`). La CA est installée sur l'iPad.
 - Wi-Fi du PC en profil « Public » : règle pare-feu « Vite dev » créée ; si l'iPad ne se connecte pas, vérifier d'abord que le serveur tourne.
 - Aucun serveur n'est lancé en arrière-plan par Claude à la fin de la session.

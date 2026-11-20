@@ -16,7 +16,7 @@ Sur le PC (une fois) :
 1. `winget install FiloSottile.mkcert`
 2. `mkcert -install` — crée la CA locale et la déclare de confiance sur Windows.
 3. Dans ce dossier : `mkcert -cert-file certs/dev.pem -key-file certs/dev-key.pem localhost 127.0.0.1 <IP-du-PC>`
-   (IP du PC = celle affichée par `ipconfig`, ex. 192.168.1.53 ; à refaire si elle change).
+   (IP du PC = celle affichée par `ipconfig`, ex. <IP-du-PC> ; à refaire si elle change).
 4. Relancer `npm run dev` : Vite utilise `certs/` automatiquement (sans ce dossier, il retombe sur un certificat auto-signé).
 
 Sur l'iPad (une fois) :
